@@ -215,4 +215,9 @@
 
 .apc-light {
   background-color: #f3f4f6;
+  color: #003366;
+}
+
+.apc-light .apc-section-title {
+  color: #003366;
 }
