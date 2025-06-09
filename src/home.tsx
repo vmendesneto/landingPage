@@ -107,7 +107,7 @@ export default function LandingPage() {
             Fale com um de nossos especialistas e descubra como aplicar gestão
             estratégica e financeira no seu negócio.
           </p>
-          <a href="mailto:contato@apcconsultoria.com" className="apc-button">
+          <a href="https://wa.me/5511999999999" className="apc-button">
             Entrar em contato agora
           </a>
         </div>
