@@ -1,38 +1,209 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.apc-page {
+  background-color: #0d1140;
+  color: #cce8ff;
+  font-family: sans-serif;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10vh;
+}
+
+/* HERO */
+.apc-hero {
+  background: linear-gradient(to bottom right, #003366, #0055a5);
+  color: white;
+  padding: 7rem 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.apc-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../src/assets/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-size: 100% auto;
+  opacity: 0.1; /* Ajuste aqui a transparência */
+  z-index: 1;
+}
+.apc-hero-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.apc-logo {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto 1.5rem;
+}
+
+.apc-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.apc-hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 32rem;
+  margin: 0 auto 2rem;
+}
+
+.apc-button {
+  display: inline-block;
+  background-color: white;
+  color: #0055a5;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.apc-button:hover {
+  background-color: #f3f4f6;
+}
+
+.apc-hero-bottom-decor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+/* SERVIÇOS */
+.apc-services {
+  padding: 6rem 1.5rem;
+  background-color: #0d1140;
+}
+
+.apc-section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+.apc-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.apc-service-card {
+  background-color: #003366;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 1px solid #0055a5;
+}
+
+.apc-service-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #cce8ff;
+  margin-bottom: 1rem;
+}
+
+/* CTA */
+.apc-cta {
+  background: linear-gradient(to bottom right, #0055a5, #0077cc);
+  padding: 6rem 1.5rem;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.apc-cta-content {
+  max-width: 40rem;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.apc-cta-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.apc-cta-text {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* FOOTER */
+.apc-footer {
+  background-color: #002244;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  color: white;
+}
+
+.apc-footer-text {
+  font-size: 0.875rem;
+}
+.apc-section-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: brown;
+}
+
+.apc-section-text {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+.apc-section-image {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+.apc-section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Mobile: um abaixo do outro */
+@media (max-width: 768px) {
+  .apc-section-row {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .apc-section-text,
+  .apc-section-image {
+    max-width: 100%;
+    flex: 1 1 100%;
   }
+}
+.apc-illustration {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
 }
