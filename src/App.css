@@ -169,17 +169,20 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  background-color: brown;
+  border-radius: 12px;
 }
 
 .apc-section-text {
   flex: 0 0 30%;
   max-width: 30%;
+  text-align: center;
 }
 
 .apc-section-image {
   flex: 0 0 70%;
   max-width: 70%;
+  display: flex;
+  justify-content: center;
 }
 
 .apc-section-image img {
