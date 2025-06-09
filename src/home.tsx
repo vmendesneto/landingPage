@@ -9,7 +9,8 @@ export default function LandingPage() {
       <section className="apc-hero">
         <div className="apc-hero-content">
           <h1 className="apc-hero-title">
-            Sua empresa com gestão profissional e decisões estratégicas
+            Aumente seu Faturamento agora com gestão profissional e decisões
+            estratégicas
           </h1>
           <p className="apc-hero-subtitle">
             A APC Consultoria oferece Análise, Planejamento e Controle
@@ -46,18 +47,16 @@ export default function LandingPage() {
 
       {/* 3. Prova social ou reforço de autoridade */}
       <section className="apc-section apc-light">
-        <div className="apc-section-content">
+        <div className="apc-cta-content">
           <h2 className="apc-section-title">Quem já confiou na APC</h2>
           <p className="apc-section-paragraph">
             Já apoiamos dezenas de empresas a estruturarem sua gestão e
             multiplicarem seus resultados com visão estratégica.
           </p>
           <ul className="apc-client-list">
-            <li>✔️ Mais de 100 diagnósticos financeiros realizados</li>
-            <li>✔️ Clientes nos setores de comércio, serviços e indústria</li>
-            <li>
-              ✔️ Equipe com experiência em controladoria e gestão de risco
-            </li>
+            <li> Mais de 100 diagnósticos financeiros realizados</li>
+            <li> Clientes nos setores de comércio, serviços e indústria</li>
+            <li>Equipe com experiência em controladoria e gestão de risco</li>
           </ul>
         </div>
       </section>

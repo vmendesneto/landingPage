@@ -1,24 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .apc-page {
   background-color: #0d1140;
   color: #cce8ff;
   font-family: sans-serif;
   min-height: 100vh;
-  padding: 10vh;
 }
 
-/* HERO */
 .apc-hero {
   background: linear-gradient(to bottom right, #003366, #0055a5);
   color: white;
-  padding: 7rem 1.5rem;
+  padding: 6rem 1.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
+
 .apc-hero::before {
   content: "";
   position: absolute;
@@ -27,21 +24,15 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-size: 100% auto;
-  opacity: 0.1; /* Ajuste aqui a transparência */
+  opacity: 0.08;
   z-index: 1;
 }
+
 .apc-hero-content {
   max-width: 64rem;
   margin: 0 auto;
   position: relative;
   z-index: 10;
-}
-
-.apc-logo {
-  width: 6rem;
-  height: 6rem;
-  margin: 0 auto 1.5rem;
 }
 
 .apc-hero-title {
@@ -64,27 +55,15 @@
   font-weight: 600;
   padding: 1rem 2rem;
   border-radius: 9999px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease;
   text-decoration: none;
 }
 
 .apc-button:hover {
-  background-color: #f3f4f6;
+  background-color: #f0f0f0;
 }
 
-.apc-hero-bottom-decor {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 5rem;
-  background-color: white;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
-
-/* SERVIÇOS */
 .apc-services {
   padding: 6rem 1.5rem;
   background-color: #0d1140;
@@ -96,6 +75,8 @@
   text-align: center;
   color: white;
   margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .apc-services-grid {
@@ -103,7 +84,6 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
   max-width: 80rem;
-  margin: 0 auto;
 }
 
 .apc-service-card {
@@ -121,7 +101,6 @@
   margin-bottom: 1rem;
 }
 
-/* CTA */
 .apc-cta {
   background: linear-gradient(to bottom right, #0055a5, #0077cc);
   padding: 6rem 1.5rem;
@@ -132,6 +111,8 @@
 .apc-cta-content {
   max-width: 40rem;
   margin: 0 auto;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .apc-cta-title {
@@ -145,7 +126,6 @@
   margin-bottom: 2rem;
 }
 
-/* FOOTER */
 .apc-footer {
   background-color: #002244;
   text-align: center;
@@ -157,19 +137,17 @@
 .apc-footer-text {
   font-size: 0.875rem;
 }
+
 .apc-section-row {
   display: flex;
-  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-  align-self: center;
-  justify-items: center;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  border-radius: 12px;
+  border-radius: 1rem;
 }
 
 .apc-section-text {
@@ -188,10 +166,9 @@
 .apc-section-image img {
   width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 1rem;
 }
 
-/* Mobile: um abaixo do outro */
 @media (max-width: 768px) {
   .apc-section-row {
     flex-direction: column;
@@ -204,14 +181,14 @@
     flex: 1 1 100%;
   }
 }
+
 .apc-illustration {
   width: 100%;
   max-width: 320px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 1rem;
 }
 
-/* Color utility sections */
 .apc-dark {
   background-color: #003366;
 }
@@ -223,4 +200,21 @@
 
 .apc-light .apc-section-title {
   color: #003366;
+}
+
+.apc-client-list {
+  text-align: left;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.apc-client-list li::before {
+  content: "✔️ ";
+  margin-right: 0.25rem;
+}
+
+.apc-section-paragraph {
+  font-size: 1.125rem;
+  margin-top: 1rem;
 }
