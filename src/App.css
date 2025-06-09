@@ -207,3 +207,12 @@
   height: auto;
   border-radius: 12px;
 }
+
+/* Color utility sections */
+.apc-dark {
+  background-color: #003366;
+}
+
+.apc-light {
+  background-color: #f3f4f6;
+}
