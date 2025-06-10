@@ -137,7 +137,7 @@ export default function LandingPage() {
               rel="noopener noreferrer"
               className="apc-footer-icon"
             >
-              <FaInstagram />
+              {React.createElement(FaInstagram)}
             </a>
             <a
               href="https://wa.me/553798766651"
@@ -145,7 +145,7 @@ export default function LandingPage() {
               rel="noopener noreferrer"
               className="apc-footer-icon"
             >
-              <FaWhatsapp />
+              {React.createElement(FaWhatsapp)}
             </a>
           </div>
         </div>
