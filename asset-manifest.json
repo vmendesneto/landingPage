@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/landingPage/static/css/main.11841499.css",
+    "main.js": "/landingPage/static/js/main.2c004f97.js",
+    "static/js/453.7ee4257d.chunk.js": "/landingPage/static/js/453.7ee4257d.chunk.js",
+    "static/media/logo.png": "/landingPage/static/media/logo.7b9c0ffb0ee164cdfc1d.png",
+    "static/media/fluxo-caixa.png": "/landingPage/static/media/fluxo-caixa.4a0870a073257c65b0e0.png",
+    "index.html": "/landingPage/index.html",
+    "main.11841499.css.map": "/landingPage/static/css/main.11841499.css.map",
+    "main.2c004f97.js.map": "/landingPage/static/js/main.2c004f97.js.map",
+    "453.7ee4257d.chunk.js.map": "/landingPage/static/js/453.7ee4257d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11841499.css",
+    "static/js/main.2c004f97.js"
+  ]
+}
