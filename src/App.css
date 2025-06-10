@@ -20,9 +20,10 @@
   content: "";
   position: absolute;
   inset: 0;
+  width: 100%;
   background-image: url("../src/assets/logo.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   opacity: 0.08;
   z-index: 1;

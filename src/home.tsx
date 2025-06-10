@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import fluxoImage from "./assets/fluxo-caixa.png";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 export default function LandingPage() {
   return (
@@ -17,7 +18,12 @@ export default function LandingPage() {
             Financeiro e Administrativo para empresas que querem crescer com
             segurança e inteligência.
           </p>
-          <a href="#contato" className="apc-button">
+          <a
+            href="https://wa.me/553798766651"
+            className="apc-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Quero uma consultoria personalizada
           </a>
         </div>
@@ -38,7 +44,7 @@ export default function LandingPage() {
           <div className="apc-section-image">
             <img
               src={fluxoImage}
-              alt="Exemplo de Fluxo de Caixa e DRE"
+              alt="Exemplo de Fluxo de Caixa"
               className="apc-illustration"
             />
           </div>
@@ -106,7 +112,12 @@ export default function LandingPage() {
             Fale com um de nossos especialistas e descubra como aplicar gestão
             estratégica e financeira no seu negócio.
           </p>
-          <a href="https://wa.me/5511999999999" className="apc-button">
+          <a
+            href="https://wa.me/553798766651"
+            className="apc-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Entrar em contato agora
           </a>
         </div>
@@ -114,10 +125,30 @@ export default function LandingPage() {
 
       {/* Rodapé */}
       <footer className="apc-footer">
-        <p className="apc-footer-text">
-          © {new Date().getFullYear()} APC Consultoria. Todos os direitos
-          reservados.
-        </p>
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+          <p className="apc-footer-text mb-4 md:mb-0">
+            © {new Date().getFullYear()} APC Consultoria. Todos os direitos
+            reservados.
+          </p>
+          <div className="apc-footer-social flex space-x-6">
+            <a
+              href="https://instagram.com/APC_consultoria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="apc-footer-icon"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://wa.me/553798766651"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="apc-footer-icon"
+            >
+              <FaWhatsapp />
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
