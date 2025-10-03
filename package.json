@@ -7,23 +7,34 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/gh-pages": "^6.1.0",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.7",
     "@types/react-icons": "^2.2.7",
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
+    "gh-pages": "^6.3.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.1.19",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "4.9.5",
+    "typescript": "5.8.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start:apc": "node scripts/switch-public.js apc_consultoria && cross-env REACT_APP_FLOWER=apc_consultoria react-scripts start",
+    "build:apc": "node scripts/switch-public.js apc_consultoria && cross-env REACT_APP_FLOWER=apc_consultoria react-scripts build",
+    "start:junia": "node scripts/switch-public.js junia_mendes && cross-env REACT_APP_FLOWER=junia_mendes react-scripts start",
+    "build:junia": "node scripts/switch-public.js junia_mendes && cross-env REACT_APP_FLOWER=junia_mendes react-scripts build",
+    "start:fertil": "node scripts/switch-public.js casa_fertil && cross-env REACT_APP_FLOWER=casa_fertil react-scripts start",
+    "build:fertil": "node scripts/switch-public.js casa_fertil && cross-env REACT_APP_FLOWER=casa_fertil react-scripts build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,5 +54,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/styled-components": "^5.1.34",
+    "cross-env": "^10.0.0"
   }
 }

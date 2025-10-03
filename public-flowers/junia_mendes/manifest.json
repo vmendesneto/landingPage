@@ -1,0 +1,27 @@
+{
+  "short_name": "SOS",
+  "name": "SOS Energético – Júnia Mendes",
+  "description": "Harmonização energética diária à distância para restaurar seu bem-estar, acalmar emoções e recuperar sua disposição.",
+  "icons": [
+    {
+      "src": "favicon-32x32.png?v=%FLOWER%",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "logo192.png?v=%FLOWER%",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png?v=%FLOWER%",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#6e4171",
+  "theme_color": "#6e4171",
+  "orientation": "portrait"
+}

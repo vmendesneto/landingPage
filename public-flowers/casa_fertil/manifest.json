@@ -1,0 +1,27 @@
+{
+  "short_name": "Casa Fértil",
+  "name": "A Casa Fértil – Júnia Mendes",
+  "description": "Método integrativo para transformar sua casa em um ambiente fértil, harmonioso e energeticamente preparado para acolher a vida.",
+  "icons": [
+    {
+      "src": "favicon-32x32.png?v=%FLOWER%",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "logo192.png?v=%FLOWER%",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png?v=%FLOWER%",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#6e4171",
+  "theme_color": "#6e4171",
+  "orientation": "portrait"
+}

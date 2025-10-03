@@ -1,3 +1,9 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@400;700&display=swap");
+
+/* Fontshare */
+@import url("https://api.fontshare.com/v2/css?f[]=glacial-indifference@400,700&f[]=satoshi@400,700&display=swap");
+
 .apc-page {
   background-color: #0d1140;
   color: #cce8ff;
@@ -21,7 +27,7 @@
   position: absolute;
   inset: 0;
   width: 100%;
-  background-image: url("../src/assets/logo.png");
+  /* background-image: url("assets/logo.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -169,6 +175,83 @@
   height: auto;
   border-radius: 1rem;
 }
+.arg1-container {
+  position: relative; /* importante para o ::before */
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  text-align: center;
+  isolation: isolate; /* garante que overlay não afete os filhos */
+}
+
+.arg1-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white; /* ou preto, se preferir */
+  opacity: 0.4; /* <<< 40% de transparência */
+  z-index: 0;
+}
+
+.arg1-title,
+.arg1-row {
+  position: relative;
+  z-index: 1; /* conteúdo fica acima do overlay */
+}
+
+.arg1-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  text-align: center;
+  color: #6e4171;
+  margin-bottom: 3rem;
+}
+.arg-texto {
+  font-family: "mulish", sans-serif;
+  font-size: 24px;
+  color: #6e4171;
+  line-height: 35px;
+  letter-spacing: -0.05em;
+  text-transform: none;
+  list-style-type: none;
+}
+.arg1-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  gap: 2rem;
+}
+
+.arg1-image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  height: 560px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.arg1-image img {
+  width: 100%;
+  height: 560px;
+  object-fit: fill;
+  display: block;
+}
+
+.arg1-text {
+  flex: 0 0 50%;
+  max-width: 50%;
+  text-align: left;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
+  white-space: pre-line;
+}
 
 @media (max-width: 768px) {
   .apc-section-row {
@@ -180,6 +263,32 @@
   .apc-section-image {
     max-width: 100%;
     flex: 1 1 100%;
+  }
+  .arg1-row {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .arg1-image {
+    order: 1;
+    flex: 0 0 auto;
+    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* dá altura proporcional */
+    min-height: 220px; /* garante uma altura mínima */
+    border-radius: 12px;
+  }
+  .arg1-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .arg1-text {
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+    padding: 16px 12px;
   }
 }
 
@@ -218,4 +327,208 @@
 .apc-section-paragraph {
   font-size: 1.125rem;
   margin-top: 1rem;
+}
+.investimento-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.investimento-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.356);
+  z-index: 0;
+}
+
+.investimento-card {
+  position: relative;
+  z-index: 1;
+  background-color: #6e4171; /* roxo */
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #fff;
+  max-width: 700px;
+  width: 100%;
+}
+
+.investimento-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.investimento-preco-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #5cf949;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  border: none; /* remove borda padrão do button */
+  width: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.investimento-preco-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.investimento-preco-box:active {
+  transform: scale(0.97);
+}
+.investimento-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+.investimento-preco {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.investimento-preco strong {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #000;
+}
+
+.investimento-preco span {
+  font-size: 1rem;
+  color: #000;
+}
+
+.investimento-promo {
+  color: #00ff88;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.8);
+}
+
+.investimento-pagamento {
+  font-size: 1rem;
+  margin-bottom: 0.5rem; /* reduzi pra dar espaço igual */
+  text-align: center; /* garante alinhamento */
+}
+
+.investimento-bandeiras {
+  width: 100%;
+  max-width: 400px;
+  height: 60px;
+  margin: 0 auto; /* centraliza o container */
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center;
+}
+
+.investimento-bandeiras img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .investimento-card {
+    padding: 1.5rem;
+  }
+
+  .investimento-preco-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .investimento-preco {
+    text-align: center;
+  }
+
+  .investimento-preco strong {
+    font-size: 2.25rem;
+  }
+
+  .investimento-bandeiras img {
+    height: 28px;
+  }
+  .investimento-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+.faq-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 1.5rem;
+  text-align: left;
+  isolation: isolate;
+}
+
+.faq-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white; /* ou preto */
+  opacity: 0.6; /* <<< 60% de transparência */
+  z-index: 0;
+}
+
+.faq-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6e4171; /* roxo */
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-pergunta {
+  font-weight: 700;
+  color: #6e4171;
+  margin-bottom: 0.25rem;
+}
+
+.faq-resposta {
+  margin-bottom: 1rem;
+  white-space: pre-line;
+  color: #333;
+}
+.gancho-button {
+  display: inline-block;
+  background-color: #5cf949;
+  color: #000; /* mesmo primaryColor */
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gancho-button:hover {
+  transform: scale(1.08); /* cresce suavemente */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
